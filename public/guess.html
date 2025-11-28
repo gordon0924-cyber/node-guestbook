@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>猜數字遊戲</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="card">
+            <h1 class="title">猜數字遊戲</h1>
+
+            <div class="controls">
+                <label for="guessField" class="label">猜一個數字 (1 到 100)</label>
+                <div class="input-row">
+                    <input type="number" class="guessField" id="guessField" min="1" max="100" placeholder="輸入數字…" />
+                    <button type="button" class="guessSubmit">提交</button>
+                </div>
+            </div>
+
+            <div class="status">
+                <div class="result" aria-live="polite"></div>
+                <div class="meta">
+                    <div class="count"></div>
+                    <p class="guesses"></p>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button type="button" class="restartBtn">重新開始</button>
+            </div>
+        </section>
+        <footer class="footer">提示：按提交猜測，或按重新開始開始新遊戲。</footer>
+    </main>
+
+    <script src="guess.js" defer></script>
+</body>
+</html>

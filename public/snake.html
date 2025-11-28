@@ -1,0 +1,44 @@
+<h1> Snake Game</h1>
+<input type="button" value="Start" id="buttonStart">
+<br/>
+
+
+<script src="snake.js"></script>
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <title>貪吃蛇</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;padding:12px}
+    #controls{margin-top:8px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+    #canvas{background:#000;display:block;border:1px solid #222}
+    #status{margin-left:12px;color:#666}
+    button:disabled{opacity:.5}
+  </style>
+</head>
+<body>
+  <h3>貪吃蛇遊戲</h3>
+
+  <canvas id="canvas" width="400" height="400"></canvas>
+
+  <div id="controls">
+    <button id="btnStart">開始</button>
+    <button id="btnPause">暫停</button>
+    <button id="btnReset">重設</button>
+
+    <label>速度：
+      <select id="selSpeed">
+        <option value="240">慢</option>
+        <option value="120" selected>普通</option>
+        <option value="60">快</option>
+      </select>
+    </label>
+
+    <span id="score">Score: 0</span>
+    <span id="status">準備</span>
+  </div>
+
+  <script src="snake.js"></script>
+</body>
+</html>
