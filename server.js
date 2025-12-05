@@ -47,7 +47,7 @@ app.post('/add-message', (req, res) => {
     console.log('一則新留言已新增，ID:', results.insertId);
     // 新增成功後，導回首頁 (/)
     // 瀏覽器會重新載入 index.html，並觸發 <script> 重新載入資料
-    res.redirect('/');
+    res.redirect('/guestbook.html');
   });
 });
 // --- 5. 啟動伺服器 ---
