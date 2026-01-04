@@ -1,15 +1,38 @@
 <head>
     <meta charset="utf-8">
+    <title>小畫家</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        canvas { border: 1px solid #ccc; cursor: crosshair; }
+        .tools { margin: 10px 0; }
+        button { margin: 5px; padding: 8px 12px; }
+        .controls { display: flex; align-items: center; gap: 10px; }
+    </style>
     <script src="draw.js" defer></script>
 </head>
 <body>
+    <h1>小畫家</h1>
     <canvas id="canvas" width='800' height='800'></canvas>
+    
+    <div class="tools">
+        <h3>工具</h3>
+        <button id='pen'>筆</button>
+        <button id='eraser'>橡皮擦</button>
+        <button id='rectangle'>矩形</button>
+        <button id='circle'>圓形</button>
+    </div>
+    
+    <div class="controls">
+        顏色：<input id="color" type="color">
+        粗細：<input id="lineWidth" type="range" min="1" max="50" step="1" />
+        <p>粗細: <output id="value"></output></p>
+    </div>
+    
+    <div>
+        <button id='toshow'>預覽圖片</button>
+        <button id='save'>保存圖片</button>
+        <button id='clear'>清除</button>
+    </div>
+    
+    <br><img id='show' style="border: 1px solid #ccc;">
 </body>
-<div>
-    顏色：<input id="color" type="color">
-    粗細：<input id="lineWidth" type="range" min="1" max="20" step="1" />
-    <p>Value: <output id="value"></output></p>
-</div>
-<button id='toshow'>產生圖片</button>
-<button id='clear'>清除</button>
-<br><img id='show'>
